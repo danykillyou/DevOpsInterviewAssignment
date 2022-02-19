@@ -1,8 +1,7 @@
-FROM python:3.7-alpine
+FROM python:3.7
 COPY requirements.txt /requirements.txt
 COPY microservice /microservice
 ENV BITDAM=2
-RUN apk add g++
 RUN pip install virtualenv
 RUN pip install -r requirements.txt
 
